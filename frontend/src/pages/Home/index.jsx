@@ -20,64 +20,13 @@ const Home = () => {
                     <p className="bg-white p-2 right-0 absolute top-3 rounded-s">quota</p>
                   </div>
                   
-                  <h3 className="w-fit text-xl">title</h3>
+                  <h3 className="w-auto text-xl truncate">title Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum reprehenderit laudantium non a eius. Facilis, natus maiores illo quasi ea ipsam beatae ab optio aut non dolor quos dicta vero.</h3>
                   <div className="flex justify-between">
                       <p className="text-amber-500">IDR. Price</p>
                       <p className="text-neutral-600">location</p>
                   </div>
                 </div>
 
-                <div className="w-sm bg-white rounded p-2">
-                  <div className="relative">
-                    <img className="w-fit h-60 object-cover object-center rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/800px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg"/>
-                    <p className="bg-white p-2 right-0 absolute top-3 rounded-s">quota</p>
-                  </div>
-                  
-                  <h3 className="w-fit text-xl">title</h3>
-                  <div className="flex justify-between">
-                      <p className="text-amber-500">IDR. Price</p>
-                      <p className="text-neutral-600">location</p>
-                  </div>
-                </div>
-
-                <div className="w-sm bg-white rounded p-2">
-                  <div className="relative">
-                    <img className="w-fit h-60 object-cover object-center rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/800px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg"/>
-                    <p className="bg-white p-2 right-0 absolute top-3 rounded-s">quota</p>
-                  </div>
-                  
-                  <h3 className="w-fit text-xl">title</h3>
-                  <div className="flex justify-between">
-                      <p className="text-amber-500">IDR. Price</p>
-                      <p className="text-neutral-600">location</p>
-                  </div>
-                </div>
-
-                <div className="w-sm bg-white rounded p-2">
-                  <div className="relative">
-                    <img className="w-fit h-60 object-cover object-center rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/800px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg"/>
-                    <p className="bg-white p-2 right-0 absolute top-3 rounded-s">quota</p>
-                  </div>
-                  
-                  <h3 className="w-fit text-xl">title</h3>
-                  <div className="flex justify-between">
-                      <p className="text-amber-500">IDR. Price</p>
-                      <p className="text-neutral-600">location</p>
-                  </div>
-                </div>
-
-                <div className="w-sm bg-white rounded p-2">
-                  <div className="relative">
-                    <img className="w-fit h-60 object-cover object-center rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/800px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg"/>
-                    <p className="bg-white p-2 right-0 absolute top-3 rounded-s">quota</p>
-                  </div>
-                  
-                  <h3 className="w-fit text-xl">title</h3>
-                  <div className="flex justify-between">
-                      <p className="text-amber-500">IDR. Price</p>
-                      <p className="text-neutral-600">location</p>
-                  </div>
-                </div>
                 
               </div>
               

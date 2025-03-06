@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AddTrip from "./pages/AddTrip";
+import Detail from "./pages/Detail";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/add-trip" element={<AddTrip />} />
         {/* lanjutkan */}
+        <Route path="/detail" element={<Detail />} />
       </Routes>
     </>
   );
