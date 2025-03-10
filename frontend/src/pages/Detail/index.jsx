@@ -1,18 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import hotel from '../../../public/icon/hotel.svg'
 import plane from '../../../public/icon/plane.svg'
 import meal from '../../../public/icon/meal.svg'
 import duration from '../../../public/icon/time.svg'
 import date from '../../../public/icon/date.svg'
 import Footer from '../../Footer'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 function Detail() {
+  const [trip, setTrip] = useState([])
+  const {id} = useParams()
+
+  async function getDetailId (){
+    try{
+      let URL = `http://localhost:3001/api/trips/${id}`
+      const response = await axios.get(URL, {
+        method: "GET",
+        headers: {"Content-Type": "application/json"}
+      })
+      setTrip(response.data.data);
+      
+    }catch(e){
+      console.error("Error fetching trips:", e);
+    }
+  }
+
+  useEffect(() => {
+    getDetailId()
+  }, []);
+
+  console.log(trip)
   return (
 <div>
     <div className='lg:px-60 py-20 bg-neutral-200 w-full'>
-      <h1 className='text-4xl font-semibold mb-0'>Title</h1>
-      <p className='text-neutral-400 mb-6 mt-2 font-medium'>location</p>
+      <h1 className='text-4xl font-semibold mb-0'>{trip.title}</h1>
+      <p className='text-neutral-400 mb-6 mt-2 font-medium'>{trip.country}</p>
 
-      <img className='w-full rounded' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/800px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg'/>
+      <img className='w-full rounded' src={trip.image}/>
       {/* grid */}
       <div className='grid grid-cols-5 gap-y-2 my-16'>
         {/* could me mapped */}
