@@ -70,7 +70,11 @@ exports.detailTrip = async (req, res) => {
 };
 
 exports.addTrip = async (req,res) => {
+  
   let data = req.body;
+
+  console.log(data)
+
   let newTrip = {
       id: TRIPS[TRIPS.length - 1].id + 1,
       ...data,
@@ -79,7 +83,11 @@ exports.addTrip = async (req,res) => {
   TRIPS.push(newTrip)
 
   res.status(200).json({
-      message: "berhasil menambahkan todo baru",
+      message: "berhasil menambahkan trip baru",
   });
+}
+
+exports.deleteTrip = async(res,req) => {
+  
 }
 // lanjutkan untuk add dan delete
