@@ -61,7 +61,7 @@ function Detail() {
         <p className='text-neutral-500 text-justify text-xs'>{trip.description}</p>
         
         <div className='font-semibold text-2xl my-8'>
-          <span className='text-amber-500'>IDR. {trip.personPrice}</span> / Person
+          <span className='text-amber-500'>IDR. {Math.ceil(trip.price / 12)} </span> / Person
         </div>
 
         <button className='w-full bg-amber-600 rounded p-1 text-white font-semibold cursor-pointer'>Delete Trip</button>

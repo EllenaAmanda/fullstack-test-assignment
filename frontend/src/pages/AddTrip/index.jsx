@@ -4,17 +4,39 @@ import Footer from "../../Footer";
 const AddTrip = () => {
   const [trip, setTrip] = useState({
     title: "",
+    description: "",
+    image:"",
     country: "",
-    accommodation: ""
+    accomodation: "",
+    transportation: "",
+    eat: "",
+    duration: {
+      days: 0,
+      nights: 0,
+    },
+    date: "",
+    quota:0,
+    price:0,
   })
 
   function handleChange(e) {
-    
-    setTrip({
-      ...trip,
-      [e.target.name]: e.target.value
-    })
+    const { name, value } = e.target;
+  
+    setTrip((prevTrip) => ({
+      ...prevTrip,
+      ...(name in prevTrip.duration
+        ? { duration: { ...prevTrip.duration, [name]: Number(value) } }
+        : { [name]: value })
+    }));
   }
+
+  function handleSubmit(e){
+    e.preventDefault()
+
+    
+  }
+
+  
   return (
   <div>
     <div className="bg-neutral-100 p-24">
@@ -23,23 +45,70 @@ const AddTrip = () => {
       <form className="flex flex-col gap-6">
         <div>
           <label className="mb-2 font-medium block">Title Trip</label>
-          <input name="trip-title" onChange={handleChange} type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+          <input name="title" onChange={handleChange} type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
         </div>
 
         <div>
           <label className="mb-2 block font-medium">Country</label>
-          <select className="p-2 w-full bg-neutral-200 rounded border border-neutral-300">
-            <option>option 1</option>
-            <option></option>
-            <option></option>
+          <select onChange={handleChange} name="country" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300">
+            <option>Select Country</option>
+            <option>Australia</option>
+            <option>Indonesia</option>
+            <option>Japan</option>
+            <option>South Korea</option>
           </select>
         </div>
         
         <div>
           <label className="mb-2 font-medium block">Accomodation</label>
-          <input type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+          <input onChange={handleChange} name="accomodation" type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
         </div>
         
+        <div>
+          <label className="mb-2 font-medium block">Transportation</label>
+          <input onChange={handleChange} name="transportation" type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Eat</label>
+          <input onChange={handleChange} name="eat" type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Duration</label>
+          <input onChange={handleChange} name="days" type="number" className="p-2 bg-neutral-200 rounded border border-neutral-300 "></input>
+          <label className="mx-3">Day</label>
+          <input onChange={handleChange} name="nights" type="number" className="p-2 bg-neutral-200 rounded border border-neutral-300 me-3"></input>
+          <label>Night</label>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Date Trip</label>
+          <input onChange={handleChange} name="date" type="text" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Price</label>
+          <input onChange={handleChange} name="price" type="number" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Quota</label>
+          <input onChange={handleChange} name="quota" type="number" className="p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Description</label>
+          <textarea onChange={handleChange} name="description" type="text" className=" p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></textarea>
+        </div>
+
+        <div>
+          <label className="mb-2 font-medium block">Image URL</label>
+          <input onChange={handleChange} name="image" type="text" className=" p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
+        </div>
+
+        <button onClick={handleSubmit} className="bg-amber-400 text-white px-5 py-1 rounded cursor-pointer w-48 block mx-auto">Add trip</button>
+
       </form>
       
     </div>
