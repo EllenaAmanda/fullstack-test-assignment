@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Footer from "../../Footer";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddTrip = () => {
+  const navigate = useNavigate()
   const [trip, setTrip] = useState({
     title: "",
     description: "",
@@ -30,10 +33,31 @@ const AddTrip = () => {
     }));
   }
 
-  function handleSubmit(e){
+  const addTrip = async (newTrip) => {
+    try {
+        let URL = "http://localhost:3001/api/trips";
+        const response = await axios.post(URL, newTrip, {
+          headers: {
+              "Content-Type": "application/json",
+          },
+      });
+
+      console.log(response.data.message);
+      return response.data;
+        
+        
+    } catch (error) {
+        console.error("Error adding trip:", error);
+    }
+  };
+
+  const handleSubmit = async(e) => {
     e.preventDefault()
 
-    
+    console.log(trip)
+    await addTrip(trip)
+
+    navigate('/')
   }
 
   
@@ -107,7 +131,7 @@ const AddTrip = () => {
           <input onChange={handleChange} name="image" type="text" className=" p-2 w-full bg-neutral-200 rounded border border-neutral-300" ></input>
         </div>
 
-        <button onClick={handleSubmit} className="bg-amber-400 text-white px-5 py-1 rounded cursor-pointer w-48 block mx-auto">Add trip</button>
+        <button type="submit" onClick={handleSubmit} className="bg-amber-400 text-white px-5 py-1 rounded cursor-pointer w-48 block mx-auto">Add trip</button>
 
       </form>
       

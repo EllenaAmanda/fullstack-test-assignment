@@ -34,7 +34,7 @@ const Home = () => {
         <div className="p-24 bg-neutral-200 min-h-screen">
           <div className="flex justify-between align-middle mb-8">
               <h1 className="text-3xl font-medium">Income Trip</h1>
-              <button className="bg-amber-400 text-white px-5 py-1 rounded cursor-pointer">Add Trip</button>
+              <Link to="/add-trip"> <button className="bg-amber-400 text-white px-5 py-1 rounded cursor-pointer">Add Trip</button> </Link>
           </div>
 
           {/* card */}

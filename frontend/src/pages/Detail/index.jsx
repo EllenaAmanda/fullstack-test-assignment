@@ -5,17 +5,17 @@ import meal from '../../../public/icon/meal.svg'
 import duration from '../../../public/icon/time.svg'
 import date from '../../../public/icon/date.svg'
 import Footer from '../../Footer'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 function Detail() {
   const [trip, setTrip] = useState([])
+  const navigate = useNavigate();
   const {id} = useParams()
 
   async function getDetailId (){
     try{
       let URL = `http://localhost:3001/api/trips/${id}`
       const response = await axios.get(URL, {
-        method: "GET",
         headers: {"Content-Type": "application/json"}
       })
       setTrip(response.data.data);
@@ -23,6 +23,27 @@ function Detail() {
     }catch(e){
       console.error("Error fetching trips:", e);
     }
+  }
+
+  async function deleteTrip() {
+    try {
+      let URL = `http://localhost:3001/api/trips/${id}`;
+      await axios.delete(URL, {
+        headers: { "Content-Type": "application/json" },
+      });
+
+      setTrip(null);
+      navigate('/');
+
+    }catch(e){
+      console.error("Error deleting trips:", e);
+    }
+  }
+
+  function handleButton(e){
+    e.preventDefault()
+
+    deleteTrip()
   }
 
   useEffect(() => {
@@ -64,7 +85,7 @@ function Detail() {
           <span className='text-amber-500'>IDR. {Math.ceil(trip.price / 12)} </span> / Person
         </div>
 
-        <button className='w-full bg-amber-600 rounded p-1 text-white font-semibold cursor-pointer'>Delete Trip</button>
+        <button type='button' onClick={handleButton} className='w-full bg-amber-600 rounded p-1 text-white font-semibold cursor-pointer'>Delete Trip</button>
       </div>
       
   </> ) 
