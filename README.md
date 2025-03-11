@@ -1,5 +1,7 @@
 # Dewe Tour - Fullstack Beginner Level
 
+Link deployed: https://dewetour1123.netlify.app/
+
 ## Setup Project
 
 1. Clone repository ini
