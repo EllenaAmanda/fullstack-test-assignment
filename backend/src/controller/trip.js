@@ -39,6 +39,86 @@ const TRIPS = [
     date: "26 August 2020",
     quota:10,
     price: 289990000,
+  },
+  {
+    id: 2,
+    title: "6D/4N Exciting Summer in Seoul",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    image:
+      "https://asset.kompas.com/crops/T7eZk7047hhMRM8qp7OWq9tpVkI=/119x0:1064x630/1200x800/data/photo/2019/08/15/5d54f790e9afe.jpg",
+    //   cobalah lengkapi sesuai dengan kebutuhan di desain
+    country: "South Korea",
+    accomodation: "Hotel Seoul",
+    transportation: "Arirang",
+    eat: "Included as Itinerary",
+    duration: {
+      days: 6,
+      nights: 4,
+    },
+    date: "26 August 2020",
+    quota:14,
+    price: 144032000,
+  },
+  {
+    id: 3,
+    title: "4D/3N Overland Jakarta Bandung",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    image:
+      "https://lp-cms-production.imgix.net/2024-12/shutterstockRF1331227853.jpg",
+    //   cobalah lengkapi sesuai dengan kebutuhan di desain
+    country: "Indonesia",
+    accomodation: "Hotel Indonesia",
+    transportation: "Garuda Indonesia",
+    eat: "Included as Itinerary",
+    duration: {
+      days: 4,
+      nights: 3,
+    },
+    date: "26 August 2020",
+    quota: 8,
+    price: 25504000,
+  },
+  {
+    id: 4,
+    title: "4D/3N Labuan Bajo Delight",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    image:
+      "https://blog.bankmega.com/wp-content/uploads/2024/12/Labuan-Bajo-Wisata-Instagramable-yang-Harus-Masuk-List-Kamu.jpg",
+    //   cobalah lengkapi sesuai dengan kebutuhan di desain
+    country: "Indonesia",
+    accomodation: "Hotel Indonesia",
+    transportation: "Garuda Indonesia",
+    eat: "Included as Itinerary",
+    duration: {
+      days: 4,
+      nights: 3,
+    },
+    date: "26 August 2020",
+    quota: 14,
+    price: 146832000,
+  },
+  {
+    id: 5,
+    title: "5D/4N Magic Tokyo Fun",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    image:
+      "https://www.cuddlynest.com/blog/wp-content/uploads/2024/03/tokyo_disneyland.png",
+    //   cobalah lengkapi sesuai dengan kebutuhan di desain
+    country: "Indonesia",
+    accomodation: "Hotel Japan",
+    transportation: "Air Japan",
+    eat: "Included as Itinerary",
+    duration: {
+      days: 5,
+      nights: 4,
+    },
+    date: "26 August 2020",
+    quota: 10,
+    price: 11188000,
   }
 ];
 
