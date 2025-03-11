@@ -14,7 +14,7 @@ function Detail() {
 
   async function getDetailId (){
     try{
-      let URL = `http://localhost:3001/api/trips/${id}`
+      let URL = `https://rolling-marchelle-rasunasaid-2ad551ab.koyeb.app/api/trips/${id}`
       const response = await axios.get(URL, {
         headers: {"Content-Type": "application/json"}
       })
@@ -27,7 +27,7 @@ function Detail() {
 
   async function deleteTrip() {
     try {
-      let URL = `http://localhost:3001/api/trips/${id}`;
+      let URL = `https://rolling-marchelle-rasunasaid-2ad551ab.koyeb.app/api/trips/${id}`;
       await axios.delete(URL, {
         headers: { "Content-Type": "application/json" },
       });

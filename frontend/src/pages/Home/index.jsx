@@ -14,7 +14,7 @@ const Home = () => {
 
   const getDatas = async() =>{
     try{
-      let URL = "http://localhost:3001/api/trips";
+      let URL = "https://rolling-marchelle-rasunasaid-2ad551ab.koyeb.app/api/trips";
       const response = await axios.get(URL, {
         method: "GET",
         headers: {"Content-Type": "application/json"}

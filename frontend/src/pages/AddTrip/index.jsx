@@ -35,7 +35,7 @@ const AddTrip = () => {
 
   const addTrip = async (newTrip) => {
     try {
-        let URL = "http://localhost:3001/api/trips";
+        let URL = "https://rolling-marchelle-rasunasaid-2ad551ab.koyeb.app/api/trips";
         const response = await axios.post(URL, newTrip, {
           headers: {
               "Content-Type": "application/json",
